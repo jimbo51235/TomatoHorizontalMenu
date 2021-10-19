@@ -27,9 +27,9 @@ class BasicViewController: TomatoHorizontalBaseController {
 			self.navigationItem.hidesBackButton = hideBackButton
 		}
 		let model0 = TomatoHorizontalMenuModel(name: "TOP", index: 0)
-		let model1 = TomatoHorizontalMenuModel(name: "LATEST", index: 1)
-		let model2 = TomatoHorizontalMenuModel(name: "SUMMARY", index: 2)
-		let model3 = TomatoHorizontalMenuModel(name: "SETTINGS", index: 3)
+		let model1 = TomatoHorizontalMenuModel(name: "LATEST", index: 2)
+		let model2 = TomatoHorizontalMenuModel(name: "SUMMARY", index: 3)
+		let model3 = TomatoHorizontalMenuModel(name: "SETTINGS", index: 1)
 		tomatoHorizontalModels = [model0, model1, model2, model3]
 		
 		/* setup variables */

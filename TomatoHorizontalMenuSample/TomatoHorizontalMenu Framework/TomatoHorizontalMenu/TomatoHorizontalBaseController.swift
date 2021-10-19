@@ -29,6 +29,18 @@ open class TomatoHorizontalBaseController: UIViewController {
 	public var hasLayoutConstraints = true
 	public var autoScroll = true
 	public func tomatoHorizontalMenuSetup() {
+		/* model validation */
+		if !isHorizontalMenuModelsValid() {
+			print("Your horizontal model array does not contain unique index numbers.")
+			return
+		}
+		
+		/* sorting model array */
+		tomatoHorizontalModels = tomatoHorizontalModels.sorted {
+			(($0).index) < (($1).index)
+		}
+		
+		/* checking the top position */
 		var topHeight: CGFloat = 0.0
 		if let navigationController = navigationController, let window = UIApplication.shared.windows.filter({$0.isKeyWindow}).first, let statusManager = window.windowScene?.statusBarManager {
 			let statusFrame = statusManager.statusBarFrame
@@ -146,6 +158,26 @@ open class TomatoHorizontalBaseController: UIViewController {
 			tomatoHorizontalBaseControllerDelegate?.viewControllerCalled(index: tag)
 		}
 		*/
+	}
+	
+	
+	// MARK: - Validating models
+	func isHorizontalMenuModelsValid() -> Bool {
+		var array = [Int]()
+		for i in 0..<tomatoHorizontalModels.count {
+			let model = tomatoHorizontalModels[i]
+			let index = model.index
+			if index >= 0 && index < tomatoHorizontalModels.count {
+				if !array.contains(index) {
+					array.append(index)
+				}
+			}
+		}
+		if array.count == tomatoHorizontalModels.count {
+			return true
+		} else {
+			return false
+		}
 	}
 }
 

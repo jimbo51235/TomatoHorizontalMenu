@@ -36,18 +36,7 @@ TomatoHorizontalMenu lets you create a horizontally-scrollable menu right below 
 
 5. Use the switchViewController function to read sender view's tag to direct the app to a specific view controller.  The following is an example.
 
-override func switchViewController(_ sender: UITapGestureRecognizer) {</br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if let tag = sender.view?.tag {</br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if tag == 0 {</br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if let viewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FirstViewController") as? FirstViewController {</br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;navigationController?.pushViewController(viewController, animated: true)</br>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</br>
-}</br>
+![](Screenshots/Screenshot_004.jpg)
 
 6. In each view controller to which the app is directed to, change the class to BasicViewController.  In its **viewDidLoad** method, set an integer (tag) to **viewIndex**.  Also, call the setup function.
 
