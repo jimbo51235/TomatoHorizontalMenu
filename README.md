@@ -13,7 +13,7 @@ Compatibility: iOS 13 or greater<br/>
 TomatoHorizontalMenu lets you create a horizontally-scrollable menu right below the navigation controller for switching from one view controller to another.  The following is a list of features.
 
 <ol>
-<li>List any number of tappable labels, each of which can be directed to a specific view controller.</li>
+<li>List any number of tappable sub-menus, each of which can be directed to a specific view controller.</li>
 <li>The default height of the horizontal menu is 60 points and can be flexible.</li>
 <li>The default space between the tappable labels is 30 points can be flexible.</li>
 <li>You have options of letting the framework set auto layout such that the horizontal menu will automatically adjust when the device is lotated.</li>
