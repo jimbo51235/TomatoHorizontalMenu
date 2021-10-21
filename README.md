@@ -13,7 +13,7 @@ Compatibility: iOS 13 or greater<br/>
 TomatoHorizontalMenu lets you create a horizontally-scrollable menu right below the navigation controller for switching from one view controller to another.  The following is a list of features.
 
 <ol>
-<li>List any number of tappable sub-menus, each of which can be directed to a specific view controller.</li>
+<li>List a number of tappable sub-menus, each of which corresponds to a specific view controller.</li>
 <li>The default height of the horizontal menu is 60 points and can be flexible.</li>
 <li>The default space between the tappable labels is 30 points can be flexible.</li>
 <li>You have options of letting the framework set auto layout such that the horizontal menu will automatically adjust when the device is lotated.</li>
@@ -28,11 +28,11 @@ TomatoHorizontalMenu lets you create a horizontally-scrollable menu right below 
 
 ![](Screenshots/Screenshot_003.jpg)
 
-2. Create a sub-class of **UIViewController**.  Name it BasicViewController, BaseViewController, RootViewController or whatever you want such that all view controllers can be based on.  For now, let us call this base view controller **BasicViewController**.  Import **TomatoHorizontalMenu** to the view controller.
+2. Create a sub-class of **UIViewController**.  Name it BasicViewController, BaseViewController, RootViewController or whatever you want such that all child view controllers can be based on.  For now, let us call this base view controller **BasicViewController**.  Import **TomatoHorizontalMenu** to the view controller.
 
-3. In the base view controller, create a function to set up the menu.  Let us call this function **setup**.  Also create **override** function named **switchViewController**.
+3. In the base view controller, create a function to set up the menu.  Let us call this function **setup**.  Also create an **override** function named **switchViewController**.
 
-4. In the setup function, create an array of menu models with **TomatoHorizontalMenuModel**.  This struct takes two properties: name (String) and index (Int).  The name property is the name of a sub-menu that appears on the horizontal menu.  Each sub-menu is supposed to point to a specific view controller.  The index property determines the order of appearance.
+4. In the setup function, create an array of menu models with **TomatoHorizontalMenuModel**.  This struct takes two properties: name (String) and index (Int).  The **name** property is the name of a sub-menu that appears on the horizontal menu.  Each sub-menu is supposed to point to a specific view controller.  The **index** property determines the order of appearance.
 
 5. Use the switchViewController function to read sender view's tag to direct the app to a specific view controller.  The following is an example.
 
