@@ -31,7 +31,7 @@ TomatoHorizontalMenu lets you create a horizontally-scrollable menu right below 
 
 2. Create a sub-class of **UIViewController**.  Name it BasicViewController, BaseViewController, RootViewController or whatever you want such that all child view controllers can be based on.  For now, let us call this base view controller **BasicViewController**.  Import **TomatoHorizontalMenu** to the view controller.
 
-3. In the base view controller, create a function to set up the menu.  Let us call this function **setup**.  Also create an **override** function named **switchViewController**.
+3. In the base view controller, set the class to **TomatoHorizontalBaseController**.  Create a function to set up the menu.  Let us call this function **setup**.  Also create an **override** function named **switchViewController**.
 
 4. In the setup function, create an array of menu models with **TomatoHorizontalMenuModel**.  This struct takes two properties: name (String) and index (Int).  The **name** property is the name of a sub-menu that appears on the horizontal menu.  Each sub-menu is supposed to point to a specific view controller.  The **index** property determines the order of appearance.
 
